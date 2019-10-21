@@ -1,0 +1,195 @@
+/*
+Theme Name: Isma
+Theme URI: //
+Author: Maxime BERNARD-JACQUET
+Author URI: //
+Description: Mon premier thème !
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+/*Ismail et ses aventures */
+
+/* PARTIE HEADER */
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/assets/font/proxima_ssv/Proxima Nova Alt Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {}
+
+.flex-header {
+  display: flex;
+  justify-content: space-around;
+}
+
+#menu-main-menu {
+  background: white;
+  padding-left: 0;
+  font-family: "Proxima Nova", sans-serif;
+  width: auto;
+  margin: auto;
+  display: flex !important;
+  justify-content: space-around !important;
+
+
+}
+
+#menu-main-menu {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  list-style: none;
+}
+
+#menu-main-menu ul li {
+  list-style: none;
+  border: solid 1px red;
+}
+
+.btn-hamb {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.underline-home {
+  color: black;
+  text-decoration: none;
+  border-bottom: 3px solid black;
+  padding-bottom: 11px;
+
+
+}
+
+.underline a:hover {
+  color: black;
+  text-decoration: none;
+  border-bottom: 3px solid black;
+  padding-bottom: 15px;
+}
+
+.black-underline:hover {}
+
+.invert {
+  width: 20%;
+}
+
+#nav-items-desktop {}
+
+/* .top-home {
+  background-image: url("http://localhost/FirstWordPress/wp-content/themes/FirstTheme/assets/svg/home-minimal.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 80%;
+  width: 15px;
+  height: 15px;
+  border-bottom: solid 3px black;
+  padding-bottom: 50px;
+}
+ */
+.btn-wish {
+  width: 150px;
+}
+
+.margin {
+  margin-right: 10%;
+}
+
+.dropdown-menu {
+  right: 6%;
+  background-color: black;
+  color: white;
+}
+
+.menu-tablette {
+  display: none;
+}
+
+.nav-items-tablet {
+  display: none;
+}
+
+/* RESPONSIVE TABLETTE */
+
+/* @media screen and (min-width: 480px) and (max-width: 768px) {
+  header {
+    z-index: 0;
+  }
+
+  .nav-items-tablet {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    align-items: flex-end;
+  }
+
+  .burger-X {
+    padding: 0%;
+    display: flex;
+    justify-content: flex-end;
+
+    width: 101.56px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .item-tabl {
+    z-index: 3;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-btn {
+    background-color: black;
+    color: white;
+  }
+
+  .menu-btn:focus {
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 0px white;
+  }
+
+  .nav-items-desktop {
+    display: none;
+  }
+
+  .tamere {
+    background-image: rgba(255, 255, 255, 1);
+  }
+} */
+
+/* Fin partie header */
+
+#menu-item-4442 span {
+  color: white;
+  margin-right: 2%;
+}
+
+._mi,
+._after,
+.fa,
+.fa-list {
+  color: white;
+}
+
+
+#wpforms-submit-4431 {
+  border-radius: 10%;
+  border-left: 2px solid gray;
+  border-bottom: 2px solid gray;
+  background-color: black;
+  color: white;
+}
+
+/*modal*/
