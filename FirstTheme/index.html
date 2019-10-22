@@ -1,152 +1,139 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>
-  >
-  <head>
-    <meta charset="<?php bloginfo('charset'); ?>" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+<?php wp_head(); ?>
+
+<?php get_header(); ?>
+
+<!--Partie gauche bandeau-->
+
+<div id="container-top">
+  <article id="front-top-left">
+    <img
+      class="image top-image"
+      src="<?php echo get_field('bandeau_image_g')['sizes']['my-custom-size']; ?>"
     />
 
-    <?php wp_head(); ?>
-    <!-- recupere les scripts et les styles -->
-  </head>
+    <article class="top-article-gauche">
+      <h1 class="title"><?php the_field('bandeau_titre_g') ?></h1>
 
-  <body <?php body_class(); ?>
-    >
-    <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-light col-12 ">
-        <a class="margin" href="<?php echo home_url( '/' ); ?>">
+      <h3 class="sous-titre">
+        <?php the_field('bandeau_survol_g')['titre'] ?>
+      </h3>
+
+      <?php
+	$group = get_field('bandeau_btn_g');
+
+	if($group['title']) :
+
+	$url = $group['url'];
+	$target = 'target="_blank" rel="noopener"';
+
+	if( $group['choice'] == 'pagelink' ) {
+	$url = $group['page_link'];
+	$target = '';
+	} ?>
+
+      <a class="lien" href="<?php echo $url ?>" <?php echo $target; ?>
+        >
+        <div class="icon-container">
           <img
-            src="<?php echo get_template_directory_uri(); ?>/assets/svg/logo-full.svg"
-            alt="Logo"
+            class="icon"
+            src="<?php echo get_template_directory_uri(); ?>/assets/svg/fleche-droite.svg"
           />
-        </a>
+        </div>
+        <p><?php echo $group['title']; ?></p>
+      </a>
 
-        <a class="top-home" href="#">
-          <!-- Logo en background en css  -->
-          <span class="sr-only">(current)</span></a
-        >
+      <?php endif; ?>
+    </article>
+  </article>
 
-        <a class="nav-item nav-link active" href="#"
-          ><span class="black-underline">MAGASIN</span>
-          <span class="sr-only">(current)</span></a
-        >
-        <a class="nav-item nav-link active" href="#"
-          ><span class="black-underline">ARCHITECTE D'INTERIEUR</span>
-          <span class="sr-only">(current)</span></a
-        >
-        <a class="nav-item nav-link active" href="#"
-          ><span class="black-underline">A PROPOS</span>
-          <span class="sr-only">(current)</span></a
-        >
-        <a class="nav-item nav-link active" href="#"
-          ><span class="black-underline">BLOG</span>
-          <span class="sr-only">(current)</span></a
-        >
-        <a class="nav-item nav-link active" href="#"
-          ><span class="black-underline">CONTACT</span>
-          <span class="sr-only">(current)</span></a
-        >
+  <!--Partie droite bandeau-->
 
-        <!-- Menu hamburger -->
-        <button
-          type="button"
-          class="btn btn-hamb btn-wish"
-          data-toggle="dropdown"
-          id="dropdownMenuButton"
+  <article id="front-top-right">
+    <img
+      class="image top-image"
+      src="<?php echo get_field('bandeau_image_d')['sizes']['my-custom-size']; ?>"
+    />
+
+    <article class="top-article-droit">
+      <h1 class="title"><?php the_field('bandeau_titre_d') ?></h1>
+      <h3 class="sous-titre">
+        <?php the_field('bandeau_survol_d')['titre'] ?>
+      </h3>
+
+      <?php
+		$group = get_field('bandeau_btn_d');
+
+		if($group['title']) :
+
+		$url = $group['url'];
+		$target = 'target="_blank" rel="noopener"';
+
+		if( $group['choice'] == 'pagelink' ) {
+		$url = $group['page_link'];
+		$target = '';
+		} ?>
+
+      <a class="lien" href="<?php echo $url ?>" <?php echo $target; ?>
         >
-          <span id="wishlist">Wishlist</span
-          ><img
-            class="burger"
-            src="<?php echo get_template_directory_uri(); ?>/assets/svg/bullet-list.svg"
-            alt="burger"
+        <div class="icon-container">
+          <img
+            class="icon"
+            src="<?php echo get_template_directory_uri(); ?>/assets/svg/fleche-droite.svg"
           />
-        </button>
-
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-              />
-              <small id="emailHelp" class="form-text text-muted"
-                >We'll never share your email with anyone else.</small
-              >
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                id="exampleInputPassword1"
-                placeholder="Password"
-              />
-            </div>
-            <div class="form-group form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1"
-                >Check me out</label
-              >
-            </div>
-
-            <button type="submit" class="btn btn-dark">Submit</button>
-          </form>
         </div>
+        <p><?php echo $group['title']; ?></p>
+      </a>
 
-        <!--Menu hamburger pour responsive tablette et mobile -->
+      <?php endif; ?>
+    </article>
+  </article>
+</div>
 
-        <div class="pos-f-t">
-          <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg">
-              <ul class="menu-site-hamburger">
-                <li><a href="#"> Nutrition</a></li>
-                <li><a href="#"> Wellness</a></li>
-                <li><a href="#"> Lifestyle</a></li>
-                <li><a href="#"> Community</a></li>
-                <li class="iconehamburger">
-                  <a href="https://www.facebook.com/"
-                    ><i class="fa fa-facebook fa-3x"></i></a
-                  >&nbsp&nbsp
-                  <a href="https://www.twitter.com/"
-                    ><i class="fa fa-twitter fa-3x"></i></a
-                  >&nbsp&nbsp
-                  <a href="https://www.instagram.com/"
-                    ><i class="fa fa-instagram fa-3x"></i></a
-                  >&nbsp&nbsp
-                </li>
-              </ul>
-            </div>
-          </div>
-          <nav class="navbar navbar-dark bg-dark">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarToggleExternalContent"
-              aria-controls="navbarToggleExternalContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              MEnu
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </nav>
+<!--Partie du milieu -->
+
+<div id="intro-container">
+  <article id="front-middle-left">
+    <article id="front-middle-text">
+      <h3 class="text"><?php the_field('intro_txt-gauche-intro') ?></h3>
+
+      <h1 class="title"><?php the_field('intro_titre_gauche_intro') ?></h1>
+
+      <h3 class="text"><?php the_field('intro_wysiwyg_intro_gauche') ?></h3>
+
+      <?php
+	$group2 = get_field('intro_lien_intro_gauche');
+
+	if($group['title']) :
+
+	$url = $group['url'];
+	$target = 'target="_blank" rel="noopener"';
+
+	if( $group['choice'] == 'pagelink' ) {
+	$url = $group['page_link'];
+	$target = '';
+	} ?>
+
+      <a class="lien" href="<?php echo $url ?>" <?php echo $target; ?>
+        >
+        <div class="icon-container">
+          <img
+            class="icon"
+            src="<?php echo get_template_directory_uri(); ?>/assets/svg/fleche-droite.svg"
+          />
         </div>
-        <!-- FIN NAV BAR STANDAR -->
-        <!-- ON VEUT LA METTRE ICI -->
-      </nav>
-    </header>
+        <p><?php echo $group['title']; ?></p>
+      </a>
 
-    <?php wp_body_open(); ?>
-  </body>
-</html>
+      <?php endif; ?>
+    </article>
+
+    <article id="front-middle-right">
+      <img
+        class="image middle-image"
+        src="<?php echo get_field('intro_image_droite')['sizes']['my-custom-size']; ?>"
+      />
+    </article>
+  </article>
+</div>
+
+<?php get_footer(); ?>

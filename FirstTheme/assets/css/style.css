@@ -18,8 +18,6 @@ Version: 1.0
   font-style: normal;
 }
 
-header {}
-
 .flex-header {
   display: flex;
   justify-content: space-around;
@@ -33,8 +31,6 @@ header {}
   margin: auto;
   display: flex !important;
   justify-content: space-around !important;
-
-
 }
 
 #menu-main-menu {
@@ -65,8 +61,6 @@ a {
   text-decoration: none;
   border-bottom: 3px solid black;
   padding-bottom: 11px;
-
-
 }
 
 .underline a:hover {
@@ -76,13 +70,15 @@ a {
   padding-bottom: 15px;
 }
 
-.black-underline:hover {}
+.black-underline:hover {
+}
 
 .invert {
   width: 20%;
 }
 
-#nav-items-desktop {}
+#nav-items-desktop {
+}
 
 /* .top-home {
   background-image: url("http://localhost/FirstWordPress/wp-content/themes/FirstTheme/assets/svg/home-minimal.svg");
@@ -183,7 +179,6 @@ a {
   color: white;
 }
 
-
 #wpforms-submit-4431 {
   border-radius: 10%;
   border-left: 2px solid gray;
@@ -193,3 +188,150 @@ a {
 }
 
 /*modal*/
+
+/* Partie Footer */
+
+#top-foot-horaire {
+  background-color: black;
+  color: white;
+}
+
+#foot-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#tissus-contenair {
+  padding-top: 40px;
+  padding-right: 30%;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#rounded-img-contenair {
+  width: 150px;
+  height: 150px;
+}
+
+#rounded-img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#roundedcanape {
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#top-foot-horaire {
+  padding: 50px;
+}
+
+/* Footer bottom */
+
+#foot-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.icon-social {
+  padding: 10px;
+}
+
+.logo-social {
+  width: 15px;
+  height: auto;
+}
+.logo-social-fb {
+  width: 10px;
+  height: auto;
+}
+
+footer {
+  width: 90%;
+  margin: auto;
+}
+
+/* Fin de la partie footer
+
+/* Front page */
+
+/* Partie bandeau */
+
+body {
+  width: 100%;
+  font-family: "Proxima Nova";
+}
+
+#container-top {
+  display: flex;
+  width: 100%;
+}
+
+#front-top-left {
+  width: 50%;
+}
+#front-top-right {
+  width: 50%;
+}
+
+.top-image {
+  width: 100%;
+  z-index: -1;
+}
+
+.top-article-droit {
+  background-color: black;
+  color: white;
+  width: 85%;
+  margin-top: -10%;
+  padding: 10%;
+  margin-left: 7%;
+}
+
+.top-article-gauche {
+  background-color: white;
+  color: black;
+  width: 85%;
+  margin-top: -10%;
+  margin-left: 7%;
+  padding: 10%;
+  margin-top: -10%;
+}
+
+h3 {
+  font-size: 16px !important;
+}
+
+/* Fin bandeau */
+
+/* Partie intro front page */
+#intro-container {
+  display: flex;
+  width: 100%;
+}
+
+.image-middle-image {
+  width: 50%;
+}
+
+/* Fin de partie intro front page */
